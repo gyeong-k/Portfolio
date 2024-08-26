@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Kim's Times</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 100px);
+        grid-gap: 10px;
+      }
+      #kinds {
+        grid-column: 3/7;
+        grid-row: 1/2;
+      }
+      #myPhoto {
+        grid-column: 3/7;
+        grid-row: 2/5;
+        width: 100%;
+        height: 100%;
+      }
+      #introduction {
+        grid-column: 3/5;
+        grid-row: 5 /7;
+      }
+      #simpleList {
+        grid-column: 5/7;
+        grid-row: 5 /7;
+      }
+      .more {
+        grid-column: 1/3;
+        grid-row: 1 /4;
+      }
+
+      .aboutMe {
+        grid-column: 1/3;
+        grid-row: 4 /7;
+      }
+      hr {
+        border: 0;
+        border-top: medium solid rgb(2, 2, 2);
+      }
+      #heightLine {
+        border-right: thin solid rgb(2, 2, 2);
+        grid-column: 1/3;
+        grid-row: 1 /7;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(217, 193, 167); margin: 100px">
+    <!--제목-->
+    <h1 id="title" style="font-size: 600%; text-align: center">
+      The Kim's Times
+    </h1>
+    <hr />
+    <!--날짜-->
+    <div style="display: flex; justify-content: center">
+      <script>
+        date = new Date().toLocaleDateString();
+        document.write(date);
+      </script>
+    </div>
+
+    <hr />
+
+    <div class="container">
+      <!--프로젝트 종류-->
+      <h1 id="kinds" style="font-size: 300%">WHAT KIND OF PROJECT</h1>
+      <!--사진-->
+      <img src="./img/myphoto.jpg" id="myPhoto" />
+      <!--소개-->
+      <div id="introduction" style="line-height: 25px">
+        안녕하세요.<br />
+        데브코스 수강생 김가영입니다. <br />개발자를 목표로 하고 있습니다.<br />
+        이 페이지는 저의 프로젝트를 소개하기 위한 공간입니다. 여러 프로젝트
+        경험을 하고 기록하는 중입니다.<br />
+        프로젝트 외에 저에 대한 다양한 정보를 포함하고 있습니다.<br />
+      </div>
+      <!--간단 목룍-->
+      <div id="simpleList">
+        <h3>Project List</h3>
+        1. <a>Portfolio</a>
+      </div>
+      <!--저에 대해 더 알고 싶나요? 블로그, 노션, 링크-->
+      <div class="more">
+        <div style="float: left; font-size: 600%; margin-right: 10px">Do</div>
+        <div style="float: left; margin-right: 10px; font-size: 300%">
+          you want <br />to me know
+        </div>
+        <div style="float: left; font-size: 600%; margin-right: 10px">MORE</div>
+        <div style="clear: both">
+          <a href="https://kekehome.tistory.com/">티스토리</a><br />
+          <a href="https://github.com/gyeong-k">깃허브</a><br />
+          <a href="https://blog.naver.com/juiinjang">네이버 블로그</a><br />
+        </div>
+      </div>
+
+      <!--내 개인정보 학력소개-->
+      <div class="aboutMe">
+        <h2>
+          <hr />
+          About Me
+        </h2>
+        <div style="line-height: 25px">
+          김가영<br />
+          1999.01.15<br />
+          충북대학교 정보통신공학부 학사<br />
+          충북대학교 전파통신공학 석사<br />
+          이메일: gy.kim.g0@gamil.com<br />
+          <a href="./cute.html">귀여운 걸</a> 좋아합니다.
+        </div>
+      </div>
+      <div id="heightLine"></div>
+    </div>
+  </body>
+</html>

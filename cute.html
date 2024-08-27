@@ -5,36 +5,51 @@
     <title>귀여운게 세상을 지배한다!</title>
     <style>
       .work-stage {
-        display: block;
-        margin-top: 100px;
-        width: 600px;
-        height: 800px;
-        background: white;
-        overflow: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 230.4px; /*(암시적) 행의 크기 정의 */
+        width: 100%;
+        min-height: 800px;
+        grid-gap: 1%;
       }
 
-      .work-stage__box {
-        height: 3000px;
-      }
-
-      .work-stage__box img {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        margin: 5px;
+      .cuteImg {
+        width: 100%;
+        height: 100%;
         border: 1px solid;
         position: static;
       }
     </style>
   </head>
-  <body>
-    <img src="./cute/IMG_2666.JPG" style="width: 100%; height: " />
-    <h1 style="display: flex; text-align: center">내가 포착한 귀여움</h1>
+  <body
+    style="background-color: rgb(249, 226, 111); width: 1200px; margin: auto"
+  >
+    <div style="margin: auto">
+      <img src="./cute/title.JPG" style="width: 100%; height: 500px" />
+      <h1 style="text-align: center; color: rgb(7, 7, 144); font-size: 50px">
+        내가 포착한 귀여움
+      </h1>
+      <a
+        href="index.html"
+        style="float: right; margin-bottom: 10px; font-size: 25px"
+        >home</a
+      >
+    </div>
 
     <div class="work-stage">
-      <img src="./cute/IMG_0117.HEIC" />
-      <img src="./cute/IMG_0272.HEIC" />
-      <img src="./cute/IMG_0348.HEIC" />
+      <img class="cuteImg" src="./cute/1.JPG" />
+      <img class="cuteImg" src="./cute/2.JPG" />
+      <img class="cuteImg" src="./cute/3.JPG" />
+      <img class="cuteImg" src="./cute/4.JPG" />
+      <img class="cuteImg" src="./cute/5.JPG" />
+      <img class="cuteImg" src="./cute/6.JPG" />
+      <img class="cuteImg" src="./cute/7.JPG" />
+      <img class="cuteImg" src="./cute/8.JPG" />
+      <img class="cuteImg" src="./cute/9.JPG" />
+      <img class="cuteImg" src="./cute/10.JPG" />
+      <img class="cuteImg" src="./cute/11.JPG" />
+      <img class="cuteImg" src="./cute/12.JPG" />
+      <img class="cuteImg" src="./cute/13.JPG" />
     </div>
   </body>
 </html>

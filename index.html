@@ -7,14 +7,16 @@
       .container {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(6, 100px);
+        grid-template-rows: repeat(7, 100px);
         grid-gap: 10px;
+        width: 1200px;
       }
       #kinds {
         grid-column: 3/7;
         grid-row: 1/2;
+        margin-right: 10%;
       }
-      #myPhoto {
+      .myPhoto {
         grid-column: 3/7;
         grid-row: 2/5;
         width: 100%;
@@ -22,11 +24,15 @@
       }
       #introduction {
         grid-column: 3/5;
-        grid-row: 5 /7;
+        grid-row: 5 /8;
       }
       #simpleList {
         grid-column: 5/7;
         grid-row: 5 /7;
+        border: 2px solid black;
+        width: 250px;
+        min-height: 250px;
+        margin: auto;
       }
       .more {
         grid-column: 1/3;
@@ -44,43 +50,55 @@
       #heightLine {
         border-right: thin solid rgb(2, 2, 2);
         grid-column: 1/3;
-        grid-row: 1 /7;
+        grid-row: 1 /8;
       }
     </style>
   </head>
   <body style="background-color: rgb(217, 193, 167); margin: 100px">
-    <!--제목-->
-    <h1 id="title" style="font-size: 600%; text-align: center">
-      The Kim's Times
-    </h1>
-    <hr />
-    <!--날짜-->
-    <div style="display: flex; justify-content: center">
-      <script>
-        date = new Date().toLocaleDateString();
-        document.write(date);
-      </script>
+    <div style="width: 1200px">
+      <!--제목-->
+      <h1 id="title" style="font-size: 600%; text-align: center">
+        The Kim's Times
+      </h1>
+      <hr />
+      <!--날짜-->
+      <div style="display: flex; justify-content: center">
+        <script>
+          date = new Date().toLocaleDateString();
+          document.write(date);
+        </script>
+      </div>
+      <hr />
     </div>
-
-    <hr />
 
     <div class="container">
       <!--프로젝트 종류-->
-      <h1 id="kinds" style="font-size: 300%">WHAT KIND OF PROJECT</h1>
+      <h1 id="kinds" style="font-size: 300%; width: 100%">
+        WHAT KIND OF PROJECT
+      </h1>
       <!--사진-->
-      <img src="./img/myphoto.jpg" id="myPhoto" />
+      <a class="myPhoto" href="./projectList.html"
+        ><img src="./img/myphoto.jpg" class="myPhoto"
+      /></a>
+
       <!--소개-->
-      <div id="introduction" style="line-height: 25px">
+      <div id="introduction" style="line-height: 25px; margin: 15px">
+        <div>&#x2B06; 사진을 클릭하면 프로젝트 페이지로 이동합니다.</div>
+        <br />
         안녕하세요.<br />
-        데브코스 수강생 김가영입니다. <br />개발자를 목표로 하고 있습니다.<br />
+        개발자를 목표로 하고 있는 데브코스 수강생 김가영입니다. <br />
         이 페이지는 저의 프로젝트를 소개하기 위한 공간입니다. 여러 프로젝트
         경험을 하고 기록하는 중입니다.<br />
         프로젝트 외에 저에 대한 다양한 정보를 포함하고 있습니다.<br />
+        <br />
+        &#x2B50; 계속 페이지 수정 중! &#x2B50;
       </div>
       <!--간단 목룍-->
       <div id="simpleList">
-        <h3>Project List</h3>
-        1. <a>Portfolio</a>
+        <div style="margin: 10px">
+          <h3>Project List</h3>
+          1. <a href="https://github.com/gyeong-k/Portfolio">Portfolio</a>
+        </div>
       </div>
       <!--저에 대해 더 알고 싶나요? 블로그, 노션, 링크-->
       <div class="more">
@@ -89,10 +107,11 @@
           you want <br />to me know
         </div>
         <div style="float: left; font-size: 600%; margin-right: 10px">MORE</div>
-        <div style="clear: both">
-          <a href="https://kekehome.tistory.com/">티스토리</a><br />
-          <a href="https://github.com/gyeong-k">깃허브</a><br />
-          <a href="https://blog.naver.com/juiinjang">네이버 블로그</a><br />
+        <div style="clear: both; grid-column: 3/4; grid-row: 1/3">
+          &#x2714; <a href="https://kekehome.tistory.com/">티스토리</a><br />
+          &#x2714; <a href="https://github.com/gyeong-k">깃허브</a><br />
+          &#x2714; <a href="https://blog.naver.com/juiinjang">네이버 블로그</a
+          ><br />
         </div>
       </div>
 
@@ -107,8 +126,9 @@
           1999.01.15<br />
           충북대학교 정보통신공학부 학사<br />
           충북대학교 전파통신공학 석사<br />
+          데브코스 수료 중!<br />
           이메일: gy.kim.g0@gamil.com<br />
-          <a href="./cute.html">귀여운 걸</a> 좋아합니다.
+          <a href="./cute.html">&#x1F496; 귀여운 걸 &#x1F49D;</a> 좋아합니다.
         </div>
       </div>
       <div id="heightLine"></div>

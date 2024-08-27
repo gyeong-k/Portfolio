@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Projects</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(3, 400px);
+        grid-gap: 10px;
+        margin: 10px;
+      }
+      .portfolio {
+        grid-column: 1/2;
+        width: 100%;
+        border: thin solid rgb(2, 2, 2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 200%; margin-left: 10px">My Projects</h1>
+    <div style="text-align: right; margin-right: 100px">
+      <a href="./index.html">home</a>
+    </div>
+    <div class="container">
+      <div class="Portfolio" style="border: thin solid rgb(2, 2, 2)">
+        <p style="text-align: center">Portfolio</p>
+        <a href="https://github.com/gyeong-k/Portfolio"
+          ><img src="./img/portfolio_img.png" style="width: 100%; height: 80%"
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
